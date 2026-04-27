@@ -64,48 +64,71 @@
 <div class="timeline">
 
 <!-- PROJECT 1 -->
-<div class="timeline-item left">
-<img src="images/op1.jpg">
+<div class="timeline-item left reveal left">
 
-<div class="timeline-content">
-<h2>2025</h2>
-<h4>Road Construction Project</h4>
-<p>
-Pekerjaan pembangunan jalan dan pemadatan tanah
-menggunakan alat berat modern dengan standar
-konstruksi nasional.
-</p>
-</div>
+    <div class="timeline-dot"></div>
+
+    <img src="images/op1.jpg">
+
+    <div class="timeline-content">
+        <h2>2025</h2>
+        <h4>Road Construction Project</h4>
+        <p>
+        Pekerjaan pembangunan jalan dan pemadatan tanah
+        menggunakan alat berat modern.
+        </p>
+    </div>
 
 </div>
 
 <!-- PROJECT 2 -->
-<div class="timeline-item right">
-<img src="images/op2.jpeg">
+<div class="timeline-item right reveal right">
 
-<div class="timeline-content">
-<h2>2023</h2>
-<h4>Industrial Development</h4>
-<p>
-Pengembangan area industri dan pembangunan fasilitas
-produksi dengan sistem engineering profesional.
-</p>
-</div>
+    <div class="timeline-dot"></div>
+
+    <img src="images/op2.jpeg">
+
+    <div class="timeline-content">
+        <h2>2023</h2>
+        <h4>Industrial Development</h4>
+        <p>
+        Pengembangan area industri dan pembangunan fasilitas produksi.
+        </p>
+    </div>
 
 </div>
 
 <!-- PROJECT 3 -->
-<div class="timeline-item left">
-<img src="images/op3.jpeg">
+<div class="timeline-item left reveal left">
 
-<div class="timeline-content">
-<h2>2022</h2>
-<h4>Infrastructure Project</h4>
-<p>
-Proyek pembangunan infrastruktur dan pekerjaan
-sipil berskala besar.
-</p>
+    <div class="timeline-dot"></div>
+
+    <img src="images/op3.jpeg">
+
+    <div class="timeline-content">
+        <h2>2022</h2>
+        <h4>Infrastructure Project</h4>
+        <p>
+        Proyek pembangunan infrastruktur berskala besar.
+        </p>
+    </div>
+
 </div>
+
+<!-- PROJECT 4 -->
+<div class="timeline-item right reveal right">
+
+    <div class="timeline-dot"></div>
+
+    <img src="images/op2.jpeg">
+
+    <div class="timeline-content">
+        <h2>2020</h2>
+        <h4>Industrial Development</h4>
+        <p>
+        Pengembangan fasilitas produksi industrial.
+        </p>
+    </div>
 
 </div>
 
@@ -174,6 +197,25 @@ proyek industri dengan standar keselamatan dan kualitas tinggi.
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+function revealOnScroll(){
+
+const reveals = document.querySelectorAll(".reveal");
+
+reveals.forEach((element)=>{
+const windowHeight = window.innerHeight;
+const elementTop = element.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 100){
+element.classList.add("active");
+}
+});
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
 
 </body>
 </html>
